@@ -30,6 +30,8 @@ Arithmetic.subtraction.calculate(10, 5)
 Arithmetic.multiplication.calculate(10, 5)
 Arithmetic.division.calculate(10, 5)
 
+Arithmetic.addition
+
 
 
 enum Temperature {
