@@ -1,5 +1,17 @@
-import UIKit
+---
+title: 18 Swift Task
+date: 2019-11-19 13:12:48
+tags: swift, class
+category: swift
+---
 
+# Class
+
+<br>
+
+### Make some classes related about real life
+
+```swift
 class Dog {
     var name: String
     var age: Int
@@ -26,7 +38,9 @@ var goldenRetriever = Dog(name: "Golden", age: 2, weight: 10.2, breed: "Golden R
 
 goldenRetriever.bark(to: "theif")
 goldenRetriever.eat("dog food")
+```
 
+```swift
 class Student {
     var name: String
     var age: Int
@@ -58,7 +72,9 @@ var soohanlee = Student(name: "Soohan Lee", age: 19, school: "JukJeon", grade: 3
 soohanlee.study(about: "Swift")
 soohanlee.eat("Gukbap")
 soohanlee.sleep(for: 1)
+```
 
+```swift
 class Phone {
     var model: String
     var price: Int
@@ -82,7 +98,9 @@ class Phone {
 let iPhone4 = Phone(model: "iPhone 4", price: 9900000, haveFaceID: false)
 iPhone4.call(to: "Mom")
 iPhone4.text(to: "Dad")
+```
 
+```swift
 class coffee {
     var name: String
     var price: Int
@@ -96,9 +114,13 @@ class coffee {
 }
 
 let cafeLatte = coffee(name: "Cafe Latte", price: 3000, origin: "Ethiopia")
+```
 
+<br>
 
+### Make Caculator with class
 
+```swift
 class Calculator {
     private var value = 0.0
     
@@ -117,28 +139,46 @@ class Calculator {
 
 let calculator = Calculator()
 
-calculator.add(10)    // 10
+calculator.add(10)
 calculator.getValue()
-calculator.add(5)     // 15
-calculator.getValue()
+// 10
 
-calculator.subtract(9)  // 6
+calculator.add(5)
 calculator.getValue()
-calculator.subtract(10) // -4
-calculator.getValue()
+// 15
 
-calculator.multiply(4)   // -16
+calculator.subtract(9)
 calculator.getValue()
-calculator.multiply(-10) // 160
+// 6
+
+calculator.subtract(10)
 calculator.getValue()
+// -4
 
-calculator.divide(10)   // 16
+calculator.multiply(4)
 calculator.getValue()
-calculator.reset()      // 0
+// -16
+
+calculator.multiply(-10)
 calculator.getValue()
+// 160
 
+calculator.divide(10)
+calculator.getValue()
+// 16
 
+calculator.reset()
+calculator.getValue()
+// 0
+```
 
+<br>
+
+### Make some formulas with class
+
+![formulas](18-Swift-Task/formula.png)
+
+```swift
 class Square {
     private var width: Double
     private var height: Double
@@ -161,7 +201,9 @@ class Square {
 
 let square = Square(width: 13)
 square.getArea()
+// 169
 square.getPerimeter()
+//52
 
 class Rectangle {
     private var width: Double
@@ -185,7 +227,9 @@ class Rectangle {
 
 let rectangle = Rectangle(width: 5, height: 12)
 rectangle.getArea()
+// 60
 rectangle.getPerimeter()
+// 34
 
 class Circle {
     private var radius: Double
@@ -207,7 +251,9 @@ class Circle {
 
 let circle = Circle(radius: 6)
 circle.getArea()
+// 113.09733552923255
 circle.getcircumference()
+// 37.69911184307752
 
 class Triangle {
     private var width: Double
@@ -227,6 +273,7 @@ class Triangle {
 
 let triangle = Triangle(width: 3, height: 14)
 triangle.getArea()
+// 21
 
 class Trapezoid {
     private var upperWidth: Double
@@ -248,6 +295,7 @@ class Trapezoid {
 
 let trapezoid = Trapezoid(upperWidth: 3, lowerWidth: 2, height: 5)
 trapezoid.getArea()
+// 12.5
 
 class Cube {
     private var width: Double
@@ -269,6 +317,7 @@ class Cube {
 
 let cube = Cube(width: 7)
 cube.getVolume()
+// 343
 
 class RectangularSolid {
     private var width: Double
@@ -290,6 +339,7 @@ class RectangularSolid {
 
 let rectangularSolid = RectangularSolid(width: 3, height: 2, depth: 5)
 rectangularSolid.getVolume()
+// 30
 
 class CircularCylinder {
     private var radius: Double
@@ -309,6 +359,7 @@ class CircularCylinder {
 
 let circularCylinder = CircularCylinder(radius: 3, height: 6)
 circularCylinder.getVolume()
+// 169.64600329384882
 
 class Sphere {
     private var radius: Double
@@ -325,7 +376,8 @@ class Sphere {
 }
 
 let sphere = Sphere(radius: 2)
-sphere.getVolume() 
+sphere.getVolume()
+// 33.510321638291124
 
 class Cone {
     private var height: Double
@@ -345,3 +397,6 @@ class Cone {
 
 let cone = Cone(height: 2, radius: 3)
 cone.getVolume()
+// 18.84955592153876
+```
+

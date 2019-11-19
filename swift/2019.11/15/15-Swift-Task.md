@@ -1,27 +1,17 @@
-import UIKit
+---
+title: 15 Swift Task      
+date: 2019-11-15 15:08:35
+tags: swift, closure
+category: swift
+---
 
-let combineStrings: (String?, String?, String?) -> String = { ($0 ?? "") + ($1 ?? "") + ($2 ?? "") }
+# Closure
 
-combineStrings("AB", "CD", "EF")
+<br>
 
-enum Arithmetic {
-    case addition((Double, Double) -> Double = { $0 + $1 })
-    case subtraction((Double, Double) -> Double = { $0 - $1 })
-    case multiplication((Double, Double) -> Double = { $0 * $1 })
-    case division((Double, Double) -> Double = { $0 / $1 })
-}
+### Optimize clousre
 
-let addition: ((Double, Double) -> Double) = { $0 + $1 }
-let subtraction: ((Double, Double) -> Double) = { $0 - $1 }
-let multiplication: ((Double, Double) -> Double) = { $0 * $1 }
-let division: ((Double, Double) -> Double) = { $0 / $1 }
-
-enum Temperature {
-    case celcius(Double), fahrenheit(Double), kelvin(Double)
-}
-
-
-
+```swift
 let someClosure: (String, String) -> Bool = { (s1: String, s2: String) -> Bool in
     let isAscending: Bool
 
@@ -37,12 +27,14 @@ let someClosure: (String, String) -> Bool = { (s1: String, s2: String) -> Bool i
 let optimizedSomeClosure: (String, String) -> Bool = { $0 > $1 }
 
 someClosure("apple", "banana")
+// false
 optimizedSomeClosure("apple", "banana")
+// false
 
 someClosure("banana", "apple")
+// ture
 optimizedSomeClosure("banana", "apple")
-
-
+// ture
 
 let otherClosure: ([Int]) -> Int = { (values: [Int]) -> Int in
     var count: Int = 0
@@ -59,3 +51,6 @@ optimizedOtherClosure([0, 1, 2, 3, 4])
 
 otherClosure([0])
 optimizedOtherClosure([0])
+```
+
+These functions might seem work differently but short form of closures are optimized so they return same value.
