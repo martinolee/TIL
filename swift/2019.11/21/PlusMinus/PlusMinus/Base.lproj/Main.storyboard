@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlusMinus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-fg-nhY">
+                                <rect key="frame" x="158.66666666666666" y="350" width="58" height="112"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="96"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-4x-gbo">
+                                <rect key="frame" x="157" y="161" width="61" height="129"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV6-ld-lei">
+                                <rect key="frame" x="157" y="512" width="61" height="129"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9U-Li-tUA"/>
+                            <constraint firstItem="oV6-ld-lei" firstAttribute="top" secondItem="xcq-fg-nhY" secondAttribute="bottom" constant="50" id="SmC-qT-yX0"/>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z4S-WA-Qcv"/>
+                            <constraint firstItem="tdu-4x-gbo" firstAttribute="centerX" secondItem="xcq-fg-nhY" secondAttribute="centerX" id="aIN-2r-pH0"/>
+                            <constraint firstItem="oV6-ld-lei" firstAttribute="centerX" secondItem="xcq-fg-nhY" secondAttribute="centerX" id="jDb-wo-W4A"/>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="top" secondItem="tdu-4x-gbo" secondAttribute="bottom" constant="60" id="qOc-YZ-x9f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="minusButton" destination="oV6-ld-lei" id="aEs-ql-56k"/>
+                        <outlet property="numberLabel" destination="xcq-fg-nhY" id="dxJ-WE-yve"/>
+                        <outlet property="plusButton" destination="tdu-4x-gbo" id="GFb-eo-93h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
