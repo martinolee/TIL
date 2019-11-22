@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-4x-gbo">
-                                <rect key="frame" x="157" y="161" width="61" height="129"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
                                 <state key="normal" title="+">
@@ -30,7 +30,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV6-ld-lei">
-                                <rect key="frame" x="157" y="512" width="61" height="129"/>
+                                <rect key="frame" x="0.0" y="462" width="375" height="350"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,12 +39,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9U-Li-tUA"/>
-                            <constraint firstItem="oV6-ld-lei" firstAttribute="top" secondItem="xcq-fg-nhY" secondAttribute="bottom" constant="50" id="SmC-qT-yX0"/>
-                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z4S-WA-Qcv"/>
-                            <constraint firstItem="tdu-4x-gbo" firstAttribute="centerX" secondItem="xcq-fg-nhY" secondAttribute="centerX" id="aIN-2r-pH0"/>
-                            <constraint firstItem="oV6-ld-lei" firstAttribute="centerX" secondItem="xcq-fg-nhY" secondAttribute="centerX" id="jDb-wo-W4A"/>
-                            <constraint firstItem="xcq-fg-nhY" firstAttribute="top" secondItem="tdu-4x-gbo" secondAttribute="bottom" constant="60" id="qOc-YZ-x9f"/>
+                            <constraint firstItem="tdu-4x-gbo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Acp-Ln-Mat"/>
+                            <constraint firstAttribute="bottom" secondItem="oV6-ld-lei" secondAttribute="bottom" id="Cj2-jX-do1"/>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V0N-f5-6R6"/>
+                            <constraint firstAttribute="trailing" secondItem="tdu-4x-gbo" secondAttribute="trailing" id="W64-wC-goH"/>
+                            <constraint firstItem="tdu-4x-gbo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aLO-JY-ADv"/>
+                            <constraint firstItem="oV6-ld-lei" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cye-sL-TP7"/>
+                            <constraint firstItem="oV6-ld-lei" firstAttribute="top" secondItem="xcq-fg-nhY" secondAttribute="bottom" id="eJV-m8-RIe"/>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ioi-r1-1Sz"/>
+                            <constraint firstItem="xcq-fg-nhY" firstAttribute="top" secondItem="tdu-4x-gbo" secondAttribute="bottom" id="lUI-sQ-4YY"/>
+                            <constraint firstAttribute="trailing" secondItem="oV6-ld-lei" secondAttribute="trailing" id="z6o-3J-PYd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

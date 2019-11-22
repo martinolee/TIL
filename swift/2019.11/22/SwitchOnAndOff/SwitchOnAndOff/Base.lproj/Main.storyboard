@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchOnAndOff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mW-Ga6">
+                                <rect key="frame" x="163.33333333333334" y="359.33333333333331" width="48.333333333333343" height="93.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-vp-dHS">
+                                <rect key="frame" x="163" y="512.66666666666663" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVo-Pe-dbW"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sng-sJ-vS6">
+                                <rect key="frame" x="33" y="577.33333333333337" width="309" height="32"/>
+                                <segments>
+                                    <segment title="Pizza"/>
+                                    <segment title="Pasta"/>
+                                    <segment title="Ramen"/>
+                                    <segment title="iPhone"/>
+                                    <segment title="iMac"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="valueChanged" id="t4J-Jf-Mex"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1y2-mW-Ga6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Pf-av-yEP"/>
+                            <constraint firstItem="ZJq-vp-dHS" firstAttribute="centerX" secondItem="1y2-mW-Ga6" secondAttribute="centerX" id="RDW-W2-fmT"/>
+                            <constraint firstItem="sng-sJ-vS6" firstAttribute="top" secondItem="ZJq-vp-dHS" secondAttribute="bottom" constant="33.666666666666629" id="VPs-LT-Kgg"/>
+                            <constraint firstItem="sng-sJ-vS6" firstAttribute="centerX" secondItem="1y2-mW-Ga6" secondAttribute="centerX" id="fmg-Ay-Zu7"/>
+                            <constraint firstItem="1y2-mW-Ga6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k0Z-ci-LHk"/>
+                            <constraint firstItem="ZJq-vp-dHS" firstAttribute="top" secondItem="1y2-mW-Ga6" secondAttribute="bottom" constant="60" id="ufD-kP-vwx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segment" destination="sng-sJ-vS6" id="huZ-as-1Xo"/>
+                        <outlet property="statementLabel" destination="1y2-mW-Ga6" id="6Qg-zp-cFa"/>
+                        <outlet property="switchButton" destination="ZJq-vp-dHS" id="dLa-Bu-eaq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.4384236453202"/>
+        </scene>
+    </scenes>
+</document>

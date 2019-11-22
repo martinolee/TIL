@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  PlusMinus
-//o
+//
 //  Created by Soohan Lee on 2019/11/21.
 //  Copyright © 2019 Soohan. All rights reserved.
 //
@@ -17,13 +17,26 @@ class ViewController: UIViewController {
     
     var number = 0
     
-    var timer: Timer?
+    var plusTimer: Timer?
+    var minusTimer: Timer?
+    
+    var repeatingTime = 0.1
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        plusButton.addTarget(self, action: #selector(plusButtonDown), for: .touchDown)
+        plusButton.addTarget(self, action: #selector(buttonUp), for: [.touchUpInside, .touchUpOutside])
+        
+        minusButton.addTarget(self, action: #selector(minusButtonDown), for: .touchDown)
+        minusButton.addTarget(self, action: #selector(buttonUp), for: [.touchUpInside, .touchUpOutside])
+    }
     
     @objc
     func plusButtonDown(_ sender: UIButton) {
         plus()
         
-        timer = Timer.scheduledTimer(timeInterval: 0.12, target: self, selector: #selector(plus), userInfo: nil, repeats: true)
+        plusTimer = Timer.scheduledTimer(timeInterval: repeatingTime, target: self, selector: #selector(plus), userInfo: nil, repeats: true)
     }
     
     @objc
@@ -32,13 +45,16 @@ class ViewController: UIViewController {
         
         numberLabel.text = "\(number)"
         numberLabel.textColor = .systemBlue
+        repeatingTime -= 0.1
+        
+        plusTimer = Timer.scheduledTimer(timeInterval: repeatingTime, target: self, selector: #selector(plus), userInfo: nil, repeats: true)
     }
     
     @objc
     func minusButtonDown(_ sender: UIButton) {
         minus()
         
-        timer = Timer.scheduledTimer(timeInterval: 0.12, target: self, selector: #selector(minus), userInfo: nil, repeats: true)
+        minusTimer = Timer.scheduledTimer(timeInterval: repeatingTime, target: self, selector: #selector(minus), userInfo: nil, repeats: true)
     }
     
     @objc
@@ -51,18 +67,8 @@ class ViewController: UIViewController {
     
     @objc
     func buttonUp(_ sender: UIButton) {
-        timer?.invalidate()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        plusButton.addTarget(self, action: #selector(plusButtonDown), for: .touchDown)
-        plusButton.addTarget(self, action: #selector(buttonUp), for: [.touchUpInside, .touchUpOutside])
-        
-        minusButton.addTarget(self, action: #selector(minusButtonDown), for: .touchDown)
-        minusButton.addTarget(self, action: #selector(buttonUp), for: [.touchUpInside, .touchUpOutside])
+        plusTimer?.invalidate()
+        minusTimer?.invalidate()
     }
     
 }
-
