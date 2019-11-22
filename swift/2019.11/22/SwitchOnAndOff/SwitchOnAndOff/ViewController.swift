@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchButton: UISwitch!
     @IBOutlet weak var segment: UISegmentedControl!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,15 +23,20 @@ class ViewController: UIViewController {
 
     @IBAction func changeLabel(_ sender: Any) {
         if sender as? UISwitch == switchButton {
-            if switchButton.isOn { statementLabel.text = "On" }
-            else { statementLabel.text = "Off" }
+            
+            if switchButton.isOn { statementLabel.text = "On"  }
+            else                 { statementLabel.text = "Off" }
+            
         } else {
+            
+            let title = segment.titleForSegment(at: segment.selectedSegmentIndex)
+            
             switch segment.selectedSegmentIndex {
-            case 0: statementLabel.text = "Pizza"
-            case 1: statementLabel.text = "Pasta"
-            case 2: statementLabel.text = "Ramen"
-            case 3: statementLabel.text = "iPhone"
-            case 4: statementLabel.text = "iMac"
+            case 0: statementLabel.text = title
+            case 1: statementLabel.text = title
+            case 2: statementLabel.text = title
+            case 3: statementLabel.text = title
+            case 4: statementLabel.text = title
             default: statementLabel.text = "Error"
             }
         }
