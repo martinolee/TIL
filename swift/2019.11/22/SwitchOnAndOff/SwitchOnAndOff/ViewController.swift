@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchButton: UISwitch!
     @IBOutlet weak var segment: UISegmentedControl!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,12 +35,11 @@ class ViewController: UIViewController {
             case 2: statementLabel.text = title
             case 3: statementLabel.text = title
             case 4: statementLabel.text = title
-            default: statementLabel.text = "Error"
+            default: break
             }
+            
         }
+        
     }
     
-    
-    
 }
-
