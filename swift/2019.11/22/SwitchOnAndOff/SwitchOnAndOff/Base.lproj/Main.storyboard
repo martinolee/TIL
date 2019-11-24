@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mW-Ga6">
-                                <rect key="frame" x="163.33333333333334" y="359.33333333333331" width="48.333333333333343" height="93.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="80"/>
+                                <rect key="frame" x="8" y="353.66666666666669" width="359" height="105"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="90"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-vp-dHS">
-                                <rect key="frame" x="163" y="512.66666666666663" width="51" height="31"/>
+                                <rect key="frame" x="163" y="518.66666666666663" width="51" height="31"/>
                                 <connections>
                                     <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVo-Pe-dbW"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sng-sJ-vS6">
-                                <rect key="frame" x="33" y="577.33333333333337" width="309" height="32"/>
+                                <rect key="frame" x="33" y="583.33333333333337" width="309" height="32"/>
                                 <segments>
                                     <segment title="Pizza"/>
                                     <segment title="Pasta"/>
@@ -43,7 +43,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1y2-mW-Ga6" secondAttribute="trailing" constant="8" id="1th-j5-huT"/>
                             <constraint firstItem="1y2-mW-Ga6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Pf-av-yEP"/>
+                            <constraint firstItem="1y2-mW-Ga6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9Cn-Wv-Lmd"/>
                             <constraint firstItem="ZJq-vp-dHS" firstAttribute="centerX" secondItem="1y2-mW-Ga6" secondAttribute="centerX" id="RDW-W2-fmT"/>
                             <constraint firstItem="sng-sJ-vS6" firstAttribute="top" secondItem="ZJq-vp-dHS" secondAttribute="bottom" constant="33.666666666666629" id="VPs-LT-Kgg"/>
                             <constraint firstItem="sng-sJ-vS6" firstAttribute="centerX" secondItem="1y2-mW-Ga6" secondAttribute="centerX" id="fmg-Ay-Zu7"/>
