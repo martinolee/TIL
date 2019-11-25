@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var plusTimer: Timer?
     var minusTimer: Timer?
     
-    var repeatingTime = 0.1
+    var repeatingTime = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +45,6 @@ class ViewController: UIViewController {
         
         numberLabel.text = "\(number)"
         numberLabel.textColor = .systemBlue
-        repeatingTime -= 0.1
-        
-        plusTimer = Timer.scheduledTimer(timeInterval: repeatingTime, target: self, selector: #selector(plus), userInfo: nil, repeats: true)
     }
     
     @objc

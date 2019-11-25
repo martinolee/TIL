@@ -21,3 +21,4 @@ func isHarshad(_ number: Int) -> Bool {
 
 isHarshad(9)
 isHarshad(777)
+isHarshad(123)

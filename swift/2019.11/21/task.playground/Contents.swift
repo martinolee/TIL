@@ -10,9 +10,9 @@ func ifNumberHasThreeSixNinePrintAsteriskFromOne(to here: UInt) {
     for number in 1 ... here {
         let hasThreeSixNine = String(number).contains("3") || String(number).contains("6") || String(number).contains("9")
         
-        if hasThreeSixNine { print("*") } else { print(number) }
+        if hasThreeSixNine { print("*", terminator: " ") } else { print(number, terminator: " ") }
     }
-    
+    print("")
 }
 
 ifNumberHasThreeSixNinePrintAsteriskFromOne(to: 10)
@@ -47,3 +47,4 @@ func getGreastCommonDivisorAndLeastCommonMultiple(firstNumber: Int, secondNumber
 }
 
 getGreastCommonDivisorAndLeastCommonMultiple(firstNumber: 140, secondNumber: 72)
+getGreastCommonDivisorAndLeastCommonMultiple(firstNumber: 85, secondNumber: 500)
