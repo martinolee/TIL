@@ -8,12 +8,12 @@
 
 import UIKit
 
-var number = 0
-
 class ViewController: UIViewController {
     
     let label = UILabel()
     let button = UIButton()
+    
+    var number = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         label.frame.size = CGSize(width: view.frame.width, height: 100)
         label.center = view.center
         label.text = "\(number)"
+        label.textColor = .random()
         label.textAlignment = .center
         label.font = UIFont(name: "Arial", size: 90)
         view.addSubview(label)
@@ -48,10 +49,11 @@ class ViewController: UIViewController {
     func didTapButton(_ sender: UIButton) {
         let nextVC = NextViewController()
         nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
         
         number += 1
         present(nextVC, animated: true, completion: nil)
     }
-
+    
 }
 
