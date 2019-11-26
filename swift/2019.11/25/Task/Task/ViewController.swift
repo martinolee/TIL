@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     func didTapButton(_ sender: UIButton) {
         let nextVC = NextViewController()
         nextVC.modalPresentationStyle = .fullScreen
-        nextVC.modalTransitionStyle = .crossDissolve
+        nextVC.modalTransitionStyle = .flipHorizontal
         
         number += 1
         present(nextVC, animated: true, completion: nil)
