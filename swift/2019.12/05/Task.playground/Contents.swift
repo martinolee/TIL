@@ -44,7 +44,12 @@ class Vehicle {
     
     init() {
         self.name = "name"
-        self.maxSpeed = 100
+        self.maxSpeed = 20
+    }
+    
+    init(maxSpeed: Int) {
+        self.name = "name"
+        self.maxSpeed = maxSpeed
     }
     
     init(name: String, maxSpeed: Int) {
@@ -54,16 +59,16 @@ class Vehicle {
 }
 
 class Car: Vehicle {
-    var modelYear: Int?
-    var numberOfSeats: Int?
+    var modelYear: Int
+    var numberOfSeats: Int
     
     init?(modelYear: Int, numberOfSeats: Int) {
-        super.init()
-        
         guard modelYear < 1 || numberOfSeats < 1 else { return nil }
         
         self.modelYear = modelYear
         self.numberOfSeats = numberOfSeats
+        
+        super.init()
     }
 }
 
@@ -73,7 +78,7 @@ class Bus: Vehicle {
     init(isDoubleDecker: Bool, maxSpeed: Int) {
         self.isDoubleDecker = isDoubleDecker
         
-        super.init()
+        super.init(maxSpeed: maxSpeed)
     }
     
     convenience init(isDoubleDecker: Bool) {
