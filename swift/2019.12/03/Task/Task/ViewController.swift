@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
         
-        if identifier == "Dog" {
+        if identifier == Animal.Dog {
             if animalCount[0] < 8 { return true }
         } else if identifier == "Cat" {
             if animalCount[1] < 10 { return true }
@@ -75,3 +75,6 @@ class ViewController: UIViewController {
 
 }
 
+enum Animal {
+    case Dog, Cat, Bird
+}
