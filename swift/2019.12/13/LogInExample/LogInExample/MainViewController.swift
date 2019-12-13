@@ -19,5 +19,9 @@ class MainViewController: UIViewController {
         signOutButton.layer.cornerRadius = 6
         eMailLabel.text = UserDefaults.standard.string(forKey: Key.eMail)
     }
+    
+    @IBAction func signOut(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: Key.isLoggedIn)
+    }
 }
 

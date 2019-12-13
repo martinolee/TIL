@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
-        let isLogIned = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
-        let rootVC = isLogIned ? MainViewController() : LogInViewController()
+        let isLoggedIn = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
+        let rootVC = isLoggedIn ? MainViewController() : LogInViewController()
         
         if #available(iOS 13.0, *) {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {

@@ -35,6 +35,21 @@ class LogInViewController: UIViewController {
         whenKeyboardShowDownLogInField()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let isLoggedIn = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
+        
+        if isLoggedIn {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+            
+            mainVC.modalPresentationStyle = .fullScreen
+            
+            self.present(mainVC, animated: true)
+        }
+    }
+    
     @IBAction func unwindToLogInVC(_ unwindSegue: UIStoryboardSegue) {
         let _ = unwindSegue.source // sourceViewController
         // Use data from the view controller which initiated the unwind segue
@@ -76,8 +91,6 @@ class LogInViewController: UIViewController {
         
         if segue.identifier == "SignIn" {
             UserDefaults.standard.set(true, forKey: Key.isLoggedIn)
-        } else {
-            
         }
         
     }
