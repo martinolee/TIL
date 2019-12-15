@@ -57,7 +57,7 @@
         <!--Log In View Controller-->
         <scene sceneID="Bhp-3b-Gbl">
             <objects>
-                <viewController id="hAc-oX-3O1" customClass="LogInViewController" customModule="LogInExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="hAc-oX-3O1" customClass="LogInViewController" customModule="LogInExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gu0-DK-Gax">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
