@@ -35,20 +35,20 @@ class LogInViewController: UIViewController {
         whenKeyboardShowDownLogInField()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let isLoggedIn = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
-        
-        if isLoggedIn {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-            
-            mainVC.modalPresentationStyle = .fullScreen
-            
-            self.present(mainVC, animated: true)
-        }
-    }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        super.viewDidAppear(animated)
+    //
+    //        let isLoggedIn = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
+    //
+    //        if isLoggedIn {
+    //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //            let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+    //
+    //            mainVC.modalPresentationStyle = .fullScreen
+    //
+    //            self.present(mainVC, animated: true)
+    //        }
+    //    }
     
     @IBAction func unwindToLogInVC(_ unwindSegue: UIStoryboardSegue) {
         let _ = unwindSegue.source // sourceViewController
@@ -59,26 +59,25 @@ class LogInViewController: UIViewController {
         if identifier == "SignIn" {
             guard
                 let inputEMail = eMailTextField.text,
-                let inputPassword = passwordTextField.text,
+                let inputPassword = passwordTextField.text
+                else { return false }
+            
+            guard
                 let userEMail = UserDefaults.standard.value(forKey: Key.eMail) as? String,
                 let userPassword = UserDefaults.standard.value(forKey: Key.password) as? String
-                else { return false }
+                else {
+                    warningEffect(to: eMailTextField)
+                    warningEffect(to: passwordTextField)
+                    
+                    return false
+            }
             
             if (inputEMail == userEMail) && (inputPassword == userPassword) {
                 UserDefaults.standard.set(true, forKey: Key.isLoggedIn)
                 return true
             } else {
-                UIView.animate(withDuration: 0.2) {
-                    self.eMailTextField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1)
-                    self.passwordTextField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1)
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    UIView.animate(withDuration: 0.2) {
-                    self.eMailTextField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 0)
-                    self.passwordTextField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 0)
-                    }
-                }
+                warningEffect(to: eMailTextField)
+                warningEffect(to: passwordTextField)
             }
             
             return false
@@ -93,6 +92,18 @@ class LogInViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: Key.isLoggedIn)
         }
         
+    }
+    
+    func warningEffect(to textField: UITextField) {
+        UIView.animate(withDuration: 0.2) {
+            textField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIView.animate(withDuration: 0.2) {
+                textField.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 0)
+            }
+        }
     }
     
     func whenKeyboardShowUpLogInField() {

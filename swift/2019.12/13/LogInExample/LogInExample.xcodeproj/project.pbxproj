@@ -66,9 +66,7 @@
 			children = (
 				720A589623A34A3F002BADA4 /* AppDelegate.swift */,
 				720A589823A34A3F002BADA4 /* SceneDelegate.swift */,
-				720A589A23A34A3F002BADA4 /* MainViewController.swift */,
-				720A58AA23A34AC3002BADA4 /* LogInViewController.swift */,
-				727654D423A3778B00BE42F1 /* SignUpViewController.swift */,
+				722EE2BE23A631CF00677EEA /* ViewControllers */,
 				727654D223A36EEF00BE42F1 /* Data.swift */,
 				727654D623A37A8D00BE42F1 /* UIViewControllerExtension.swift */,
 				720A589C23A34A3F002BADA4 /* Main.storyboard */,
@@ -77,6 +75,16 @@
 				720A58A423A34A41002BADA4 /* Info.plist */,
 			);
 			path = LogInExample;
+			sourceTree = "<group>";
+		};
+		722EE2BE23A631CF00677EEA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				720A589A23A34A3F002BADA4 /* MainViewController.swift */,
+				720A58AA23A34AC3002BADA4 /* LogInViewController.swift */,
+				727654D423A3778B00BE42F1 /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
