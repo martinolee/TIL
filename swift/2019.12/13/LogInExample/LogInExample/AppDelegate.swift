@@ -11,31 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
-        let isLoggedIn = UserDefaults.standard.bool(forKey: Key.isLoggedIn)
-        let rootVC = isLoggedIn ? MainViewController() : LogInViewController()
-        
-        if #available(iOS 13.0, *) {
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                let window = UIWindow(windowScene: windowScene)
-                let sceneDelegate = windowScene.delegate as? SceneDelegate
-                
-                window.rootViewController = rootVC
-                sceneDelegate?.window = window
-                window.makeKeyAndVisible()
-            }
-        } else {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let window = UIWindow(frame: UIScreen.main.bounds)
-            
-            window.rootViewController = rootVC
-            window.makeKeyAndVisible()
-            appDelegate.window = window
-        }
         
         return true
     }
