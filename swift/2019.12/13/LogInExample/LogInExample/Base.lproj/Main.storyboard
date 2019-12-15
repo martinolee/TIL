@@ -164,8 +164,8 @@
                             <constraint firstItem="rcH-Xa-WSL" firstAttribute="centerX" secondItem="Gu0-DK-Gax" secondAttribute="centerX" id="6QQ-Tw-GTL"/>
                             <constraint firstItem="Mm0-AJ-jH7" firstAttribute="top" secondItem="1OH-O2-KW8" secondAttribute="top" constant="28" id="GMx-hF-j1n"/>
                             <constraint firstItem="nTb-6W-a5G" firstAttribute="leading" secondItem="1OH-O2-KW8" secondAttribute="leading" id="KQB-Ui-kq8"/>
-                            <constraint firstItem="rcH-Xa-WSL" firstAttribute="top" secondItem="1OH-O2-KW8" secondAttribute="top" constant="100" id="Q93-jb-rAj"/>
                             <constraint firstItem="1OH-O2-KW8" firstAttribute="trailing" secondItem="Mm0-AJ-jH7" secondAttribute="trailing" constant="16" id="SJ9-j1-uDS"/>
+                            <constraint firstItem="nTb-6W-a5G" firstAttribute="top" secondItem="rcH-Xa-WSL" secondAttribute="bottom" constant="350" id="V21-de-anB"/>
                             <constraint firstAttribute="bottom" secondItem="nTb-6W-a5G" secondAttribute="bottom" constant="100" id="aWg-rA-KXq"/>
                             <constraint firstItem="kEU-ga-byT" firstAttribute="leading" secondItem="1OH-O2-KW8" secondAttribute="leading" constant="16" id="cQK-RR-Jmd"/>
                             <constraint firstItem="1OH-O2-KW8" firstAttribute="bottom" secondItem="kEU-ga-byT" secondAttribute="bottom" constant="20" id="prZ-4q-0Nv"/>
