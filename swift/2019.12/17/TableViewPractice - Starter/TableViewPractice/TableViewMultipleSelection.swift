@@ -31,7 +31,6 @@ final class TableViewMultipleSelection: UIViewController {
     private let cellCount = 40
     private let numberRange = 50
     private let refreshControl = UIRefreshControl()
-    private var selectedRows = [IndexPath]()
     
     override var description: String {
         return "Task 1 - MultipleSelection"
@@ -66,9 +65,15 @@ final class TableViewMultipleSelection: UIViewController {
     @objc
     func randomNumbers() {
         var highPriorityNumbers = [Int]()
-        selectedRows.sort(by: >)
-        for index in selectedRows {
-            highPriorityNumbers.append(Int(tableView.cellForRow(at: index)!.textLabel!.text!)!)
+        
+        var selectedRows = tableView.indexPathsForSelectedRows
+        
+        selectedRows?.sort(by: { (i, j) -> Bool in
+            i > j
+        })
+        
+        for selectedRow in selectedRows ?? [] {
+            highPriorityNumbers.append(Int(tableView.cellForRow(at: selectedRow)!.textLabel!.text!)!)
         }
         
         numbers = Array(0...cellCount + numberRange)
@@ -87,7 +92,6 @@ final class TableViewMultipleSelection: UIViewController {
         
         numbers = Array(numbers.dropLast(50))
         tableView.reloadData()
-        selectedRows.removeAll()
         refreshControl.endRefreshing()
     }
 }
@@ -116,9 +120,5 @@ extension TableViewMultipleSelection: UITableViewDelegate {
         }
         
         return indexPath
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRows.append(indexPath)
     }
 }
