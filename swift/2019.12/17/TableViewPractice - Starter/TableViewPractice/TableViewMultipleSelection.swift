@@ -66,17 +66,15 @@ final class TableViewMultipleSelection: UIViewController {
     func randomNumbers() {
         var highPriorityNumbers = [Int]()
         
-        var selectedRows = tableView.indexPathsForSelectedRows
+        var selectedIndexPaths = tableView.indexPathsForSelectedRows
         
-        selectedRows?.sort(by: { (i, j) -> Bool in
-            i > j
-        })
+        selectedIndexPaths?.sort(by: { (i, j) -> Bool in i > j })
         
-        for selectedRow in selectedRows ?? [] {
-            highPriorityNumbers.append(Int(tableView.cellForRow(at: selectedRow)!.textLabel!.text!)!)
+        for selectedIndexPaht in selectedIndexPaths ?? [] {
+            highPriorityNumbers.append(numbers[selectedIndexPaht.row])
         }
         
-        numbers = Array(0...cellCount + numberRange)
+        numbers = Array(1...cellCount + numberRange)
         numbers.shuffle()
         
         for highPriorityNumber in highPriorityNumbers {
@@ -90,7 +88,7 @@ final class TableViewMultipleSelection: UIViewController {
         }
         
         
-        numbers = Array(numbers.dropLast(50))
+        numbers = Array(numbers.dropLast(numberRange))
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
