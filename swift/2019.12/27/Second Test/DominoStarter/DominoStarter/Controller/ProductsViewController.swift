@@ -27,10 +27,6 @@ class ProductsViewController: UIViewController {
         if segue.identifier == "DetailProductSegue" {
             let productDetailVC =  segue.destination as! ProductDetailViewController
             
-//            let backItem = UIBarButtonItem()
-//            backItem.title = menuCategorys
-//            navigationItem.backBarButtonItem = backItem
-            
             productDetailVC.selectedCellIndexPath = self.selectedCellIndexPath
         }
     }
@@ -63,8 +59,6 @@ extension ProductsViewController: UITableViewDataSource {
         numberFormatter.numberStyle = .decimal
         let formattedPrice = numberFormatter.string(from: NSNumber(value: product.price))!
         
-        cell.contentView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        
         cell.productImageView.image = UIImage(named: product.name)
         cell.productNameLabel.text = product.name
         cell.productPriceLabel.text = "\(formattedPrice)원"
@@ -77,6 +71,8 @@ extension ProductsViewController: UITableViewDataSource {
 extension ProductsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 80 }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 120 }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.setSelected(false, animated: true)
