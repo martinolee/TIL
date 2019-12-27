@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7211F43823ACABD900D406BA /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7211F43723ACABD900D406BA /* Calculation.swift */; };
 		727EA2DA23AC7E350037E756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA2D923AC7E350037E756 /* AppDelegate.swift */; };
 		727EA2DC23AC7E350037E756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA2DB23AC7E350037E756 /* SceneDelegate.swift */; };
-		727EA2DE23AC7E350037E756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA2DD23AC7E350037E756 /* ViewController.swift */; };
 		727EA2E123AC7E350037E756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727EA2DF23AC7E350037E756 /* Main.storyboard */; };
 		727EA2E323AC7E370037E756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727EA2E223AC7E370037E756 /* Assets.xcassets */; };
 		727EA2E623AC7E370037E756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727EA2E423AC7E370037E756 /* LaunchScreen.storyboard */; };
+		727EA2EE23AC7FE80037E756 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA2ED23AC7FE80037E756 /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7211F43723ACABD900D406BA /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		727EA2D623AC7E350037E756 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727EA2D923AC7E350037E756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727EA2DB23AC7E350037E756 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		727EA2DD23AC7E350037E756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		727EA2E023AC7E350037E756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		727EA2E223AC7E370037E756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		727EA2E523AC7E370037E756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		727EA2E723AC7E370037E756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		727EA2ED23AC7FE80037E756 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				727EA2D923AC7E350037E756 /* AppDelegate.swift */,
 				727EA2DB23AC7E350037E756 /* SceneDelegate.swift */,
-				727EA2DD23AC7E350037E756 /* ViewController.swift */,
+				727EA2ED23AC7FE80037E756 /* CalculatorViewController.swift */,
+				7211F43723ACABD900D406BA /* Calculation.swift */,
 				727EA2DF23AC7E350037E756 /* Main.storyboard */,
 				727EA2E223AC7E370037E756 /* Assets.xcassets */,
 				727EA2E423AC7E370037E756 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				727EA2DE23AC7E350037E756 /* ViewController.swift in Sources */,
 				727EA2DA23AC7E350037E756 /* AppDelegate.swift in Sources */,
+				727EA2EE23AC7FE80037E756 /* CalculatorViewController.swift in Sources */,
 				727EA2DC23AC7E350037E756 /* SceneDelegate.swift in Sources */,
+				7211F43823ACABD900D406BA /* Calculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

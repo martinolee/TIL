@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class DominoImages {
+    static let dominoLogo = "dominoLogo"
+    static let hotPizza = "hotPizza"
+    static let meatPizza = "meatPizza"
+    static let shirimpPizza = "shirimpPizza"
+    static let windeBanner = "wideBanner"
+}
