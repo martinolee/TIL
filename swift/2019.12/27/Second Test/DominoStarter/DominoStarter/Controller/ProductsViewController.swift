@@ -17,6 +17,8 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBarItem.tag = TabBarItemTag.productsViewController.rawValue
+        
         productTableView.dataSource = self
         productTableView.delegate = self
         

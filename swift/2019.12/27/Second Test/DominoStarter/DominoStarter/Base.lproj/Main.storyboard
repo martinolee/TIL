@@ -215,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="2258.4000000000001" y="-384.23645320197045"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Domino Tab Bar Controller-->
         <scene sceneID="Bqg-Gf-Sd2">
             <objects>
-                <tabBarController id="XsC-SI-HUu" sceneMemberID="viewController">
+                <tabBarController id="XsC-SI-HUu" customClass="DominoTabBarController" customModule="DominoStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qmx-Qh-wdq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

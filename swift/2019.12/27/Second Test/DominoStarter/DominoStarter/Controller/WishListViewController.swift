@@ -17,6 +17,8 @@ class WishListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBarItem.tag = TabBarItemTag.wishListViewController.rawValue
+        
         wishListTableView.dataSource = self
         wishListTableView.delegate = self
     }

@@ -14,6 +14,16 @@ class CategoryHeaderView: UITableViewHeaderFooterView {
     
     let categoryImageView = UIImageView()
     
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        
+        configureContents()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func configureContents() {
         categoryImageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -27,16 +37,6 @@ class CategoryHeaderView: UITableViewHeaderFooterView {
             categoryImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             categoryImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
-    }
-    
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-        
-        configureContents()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

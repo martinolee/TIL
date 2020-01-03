@@ -19,6 +19,7 @@
 		7283F9CC23B5BC76000F6FF1 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283F9CB23B5BC76000F6FF1 /* WishListViewController.swift */; };
 		7283F9CE23B5BEC7000F6FF1 /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283F9CD23B5BEC7000F6FF1 /* WishListTableViewCell.swift */; };
 		7283F9D123B5D0B1000F6FF1 /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283F9D023B5D0B1000F6FF1 /* CategoryHeaderView.swift */; };
+		7283F9D923B5FA6D000F6FF1 /* DominoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283F9D823B5FA6D000F6FF1 /* DominoTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7283F9CB23B5BC76000F6FF1 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		7283F9CD23B5BEC7000F6FF1 /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
 		7283F9D023B5D0B1000F6FF1 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
+		7283F9D823B5FA6D000F6FF1 /* DominoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominoTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4FFB5FFF23B510DB0066317F /* Assets.xcassets */,
 				4FFB600123B510DB0066317F /* LaunchScreen.storyboard */,
 				4FFB600423B510DB0066317F /* Info.plist */,
+				7283F9D823B5FA6D000F6FF1 /* DominoTabBarController.swift */,
 			);
 			path = DominoStarter;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				7283F9C623B5BBAF000F6FF1 /* ProductTableViewCell.swift in Sources */,
 				4FFB5FF923B510DA0066317F /* SceneDelegate.swift in Sources */,
 				4FFB600C23B511210066317F /* DominoData.swift in Sources */,
+				7283F9D923B5FA6D000F6FF1 /* DominoTabBarController.swift in Sources */,
 				7283F9C823B5BC2B000F6FF1 /* ProductsViewController.swift in Sources */,
 				7283F9CA23B5BC6E000F6FF1 /* ProductDetailViewController.swift in Sources */,
 			);
