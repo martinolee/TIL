@@ -10,7 +10,7 @@ import UIKit
 
 class WishListViewController: UIViewController {
     
-    var wishList = [Product]()
+    private var wishList = [Product]()
     
     @IBOutlet var wishListTableView: UITableView!
     
@@ -35,6 +35,20 @@ class WishListViewController: UIViewController {
         for section in 0 ..< menuProducts.count {
             for row in 0 ..< menuProducts[section].count {
                 menuProducts[section][row].quantity = 0
+            }
+        }
+        
+        wishListTableView.reloadData()
+    }
+    
+    func updateWishList() {
+        wishList.removeAll()
+        
+        for category in menuProducts {
+            for product in category {
+                if product.quantity > 0 {
+                    wishList.append(product)
+                }
             }
         }
         
@@ -73,20 +87,6 @@ class WishListViewController: UIViewController {
         }))
         
         present(orderConfirmAlert, animated: true, completion: nil)
-    }
-    
-    func updateWishList() {
-        wishList.removeAll()
-        
-        for category in menuProducts {
-            for product in category {
-                if product.quantity > 0 {
-                    wishList.append(product)
-                }
-            }
-        }
-        
-        wishListTableView.reloadData()
     }
     
 }

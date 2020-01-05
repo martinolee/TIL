@@ -25,6 +25,12 @@ class ProductsViewController: UIViewController {
         productTableView.register(CategoryHeaderView.self, forHeaderFooterViewReuseIdentifier: CategoryHeaderView.identifier)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.title = "Domino's"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailProductSegue" {
             let productDetailVC =  segue.destination as! ProductDetailViewController
