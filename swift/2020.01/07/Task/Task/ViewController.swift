@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         
         setupTapGesture()
         setupTapGestureUsingDelegate()
+        
+        countLabel.text = "\(touchCount)"
     }
     
     @IBAction func segmentedConrtrolValueChanged(_ sender: UISegmentedControl) {
@@ -98,7 +100,7 @@ class ViewController: UIViewController {
         if isCloserThanTen {
             touchCount += 1
         } else {
-            touchCount = 0
+            touchCount = 1
         }
     }
     
