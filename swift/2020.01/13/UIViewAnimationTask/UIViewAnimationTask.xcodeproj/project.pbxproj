@@ -13,6 +13,7 @@
 		7213B90C23CC441C00F93269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7213B90A23CC441C00F93269 /* Main.storyboard */; };
 		7213B90E23CC441E00F93269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7213B90D23CC441E00F93269 /* Assets.xcassets */; };
 		7213B91123CC441E00F93269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7213B90F23CC441E00F93269 /* LaunchScreen.storyboard */; };
+		7213B91B23CC4E1800F93269 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213B91A23CC4E1800F93269 /* RandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7213B90D23CC441E00F93269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7213B91023CC441E00F93269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7213B91223CC441E00F93269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7213B91A23CC4E1800F93269 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				7213B90623CC441C00F93269 /* SceneDelegate.swift */,
 				7213B90823CC441C00F93269 /* ViewController.swift */,
 				7213B90A23CC441C00F93269 /* Main.storyboard */,
+				7213B91A23CC4E1800F93269 /* RandomColor.swift */,
 				7213B90D23CC441E00F93269 /* Assets.xcassets */,
 				7213B90F23CC441E00F93269 /* LaunchScreen.storyboard */,
 				7213B91223CC441E00F93269 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7213B91B23CC4E1800F93269 /* RandomColor.swift in Sources */,
 				7213B90923CC441C00F93269 /* ViewController.swift in Sources */,
 				7213B90523CC441C00F93269 /* AppDelegate.swift in Sources */,
 				7213B90723CC441C00F93269 /* SceneDelegate.swift in Sources */,
