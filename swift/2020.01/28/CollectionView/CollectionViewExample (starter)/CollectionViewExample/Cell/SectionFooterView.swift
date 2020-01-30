@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 final class SectionFooterView: UICollectionReusableView {
   static let identifier = "SectionFooterView"
   

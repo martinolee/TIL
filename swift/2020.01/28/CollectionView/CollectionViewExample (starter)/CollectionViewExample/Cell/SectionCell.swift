@@ -36,7 +36,7 @@ final class SectionCell: UICollectionViewCell {
     contentView.addSubview(imageView)
     
     // titleLabel
-    titleLabel.textColor = .darkText
+    titleLabel.textColor = .label
     titleLabel.textAlignment = .center
     titleLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     contentView.addSubview(titleLabel)
@@ -56,9 +56,8 @@ final class SectionCell: UICollectionViewCell {
       titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
       titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
       titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+      titleLabel.heightAnchor.constraint(equalToConstant: 25.0)
       ])
-    
-    titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
   }
 
   

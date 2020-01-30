@@ -54,18 +54,14 @@ class CollectionViewController: UIViewController {
   }
   
   private func setupFlowLayout() {
-    let fourSidesInset: CGFloat = 8.0
     let minimumLineSpacing: CGFloat = 8.0
     let minimumInteritemSpacing: CGFloat = 8.0
-    let itemsForLine: CGFloat = 2
-    let itemSizeWidth = (catCollectionView.frame.width - (fourSidesInset * 2 + minimumInteritemSpacing * (itemsForLine - 1))) / itemsForLine
+    let insets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    let itemsForLine: CGFloat = 3
+    let itemSizeWidth = ((catCollectionView.frame.width - (insets.left + insets.right + minimumInteritemSpacing * (itemsForLine - 1))) / itemsForLine).rounded(.down)
     let itemSize = CGSize(width: itemSizeWidth, height: itemSizeWidth)
     
-    catCollectionViewFlowLayout.sectionInset = UIEdgeInsets(
-      top: fourSidesInset,
-      left: fourSidesInset,
-      bottom: fourSidesInset,
-      right: fourSidesInset)
+    catCollectionViewFlowLayout.sectionInset = insets
     catCollectionViewFlowLayout.minimumLineSpacing = minimumLineSpacing
     catCollectionViewFlowLayout.minimumInteritemSpacing = minimumInteritemSpacing
     catCollectionViewFlowLayout.itemSize = itemSize

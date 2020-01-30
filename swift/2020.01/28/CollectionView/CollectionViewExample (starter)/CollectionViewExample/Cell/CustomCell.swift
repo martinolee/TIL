@@ -38,6 +38,7 @@ final class CustomCell: UICollectionViewCell {
     
     titleLabel.textAlignment = .center
     titleLabel.textColor = .label
+    titleLabel.backgroundColor = .systemGray
     titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
     contentView.addSubview(titleLabel)
   }
@@ -56,9 +57,8 @@ final class CustomCell: UICollectionViewCell {
     titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
     titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
     titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+    titleLabel.heightAnchor.constraint(equalToConstant: 25.0),
     ])
-    
-    titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
   }
   
   // MARK: Configure Cell
