@@ -10,7 +10,9 @@ import UIKit
 
 final class ReorderingViewController: UIViewController {
 
-  var parkImages = ParkManager.imageNames(of: .nationalPark)
+  let names = ParkManager.imageNames(of: .nationalPark)
+  
+  lazy var parkImages = names + names + names
   
   let layout = UICollectionViewFlowLayout()
   lazy var collectionView: UICollectionView = {
@@ -84,14 +86,14 @@ final class ReorderingViewController: UIViewController {
 
 extension ReorderingViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return parkImages.count * 3
+    return parkImages.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: CustomCell.identifier, for: indexPath
       ) as! CustomCell
-    let item = indexPath.item % parkImages.count
+    let item = indexPath.item
     cell.backgroundColor = .black
     cell.configure(image: UIImage(named: parkImages[item]), title: parkImages[item])
     return cell
@@ -100,8 +102,8 @@ extension ReorderingViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
     guard sourceIndexPath != destinationIndexPath else { return }
     
-    let source = sourceIndexPath.item % parkImages.count
-    let destination = destinationIndexPath.item % parkImages.count
+    let source = sourceIndexPath.item
+    let destination = destinationIndexPath.item
     print("source:", source, "dest :", destination)
     
     let element = parkImages.remove(at: source)

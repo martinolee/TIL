@@ -81,7 +81,7 @@ class Bus: Vehicle {
         super.init(maxSpeed: maxSpeed)
     }
     
-    convenience init(isDoubleDecker: Bool) {
+  convenience init(isDoubleDecker: Bool) {
         self.init(isDoubleDecker: isDoubleDecker, maxSpeed: 100)
     }
 }
