@@ -70,6 +70,12 @@
                                     <segue destination="3AP-nW-TWx" kind="push" id="gMZ-bt-uI1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWH-DT-ftD">
+                                <rect key="frame" x="166.66666666666666" y="546.33333333333337" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -78,6 +84,7 @@
                             <constraint firstItem="8pP-bH-8AH" firstAttribute="leading" secondItem="jOK-aO-Ulw" secondAttribute="leading" id="B12-5n-Yk6"/>
                             <constraint firstItem="TgX-1E-2MG" firstAttribute="top" secondItem="r5J-9G-4BJ" secondAttribute="bottom" constant="8" id="CRi-cw-iJq"/>
                             <constraint firstItem="SA2-Y2-V71" firstAttribute="leading" secondItem="SNS-af-cxE" secondAttribute="leading" id="DvC-7o-hTI"/>
+                            <constraint firstItem="hWH-DT-ftD" firstAttribute="top" secondItem="O9Z-wk-7DF" secondAttribute="bottom" constant="60" id="EjK-9k-t0F"/>
                             <constraint firstItem="O9Z-wk-7DF" firstAttribute="top" secondItem="6DY-Ne-so9" secondAttribute="bottom" constant="16" id="Kop-jZ-LbU"/>
                             <constraint firstItem="6DY-Ne-so9" firstAttribute="centerX" secondItem="8pP-bH-8AH" secondAttribute="centerX" id="NPy-mb-Emo"/>
                             <constraint firstItem="jvA-TK-PRG" firstAttribute="centerX" secondItem="8pP-bH-8AH" secondAttribute="centerX" id="Sfv-Ey-IMf"/>
@@ -93,6 +100,7 @@
                             <constraint firstItem="jOK-aO-Ulw" firstAttribute="leading" secondItem="SA2-Y2-V71" secondAttribute="leading" id="lVj-6Z-HxA"/>
                             <constraint firstItem="jOK-aO-Ulw" firstAttribute="top" secondItem="SA2-Y2-V71" secondAttribute="bottom" constant="16" id="mOi-wB-tIA"/>
                             <constraint firstItem="r5J-9G-4BJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nyF-BV-b5m"/>
+                            <constraint firstItem="hWH-DT-ftD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w1j-Kv-PQG"/>
                             <constraint firstItem="SNS-af-cxE" firstAttribute="leading" secondItem="TgX-1E-2MG" secondAttribute="leading" id="wkp-Yn-Z63"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,6 +110,7 @@
                         <outlet property="birthDayTextField" destination="SA2-Y2-V71" id="k7R-3R-Jgt"/>
                         <outlet property="creatButton" destination="6DY-Ne-so9" id="zOa-Jj-gaq"/>
                         <outlet property="emailTextField" destination="8pP-bH-8AH" id="DqB-Ek-ni6"/>
+                        <outlet property="helloLabel" destination="hWH-DT-ftD" id="uF9-Ph-VJL"/>
                         <outlet property="nameTextField" destination="TgX-1E-2MG" id="I8y-Yo-QYL"/>
                         <outlet property="referButton" destination="O9Z-wk-7DF" id="Vcb-Ao-zAM"/>
                         <outlet property="successOrFailureLabel" destination="jvA-TK-PRG" id="Oaf-WT-6aV"/>
