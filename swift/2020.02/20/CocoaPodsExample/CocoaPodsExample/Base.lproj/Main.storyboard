@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VF0-Sw-CQt">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--star-->
+        <scene sceneID="mfe-xe-laD">
+            <objects>
+                <viewController id="EUW-EK-Sqj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHB-ab-2Mv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yrr-gi-wzk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="star" image="doc.text.fill" catalog="system" id="PVl-HY-dr5" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="b1H-Mn-THg" id="twh-X9-arN"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Or7-rS-wAL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhm-HO-r5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="b1H-Mn-THg" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="952"/>
+        </scene>
+        <!--circle-->
+        <scene sceneID="FSs-b0-OKm">
+            <objects>
+                <viewController id="ejT-4u-sal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="miw-r9-e8P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wwB-HC-Kyj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="circle" image="person.3.fill" catalog="system" id="OJJ-m5-81e" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="kmV-Ve-2s3" id="gN8-J4-RRm"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7P-J5-ihy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="kmV-Ve-2s3" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="953"/>
+        </scene>
+        <!--heart-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CocoaPodsExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="heart" image="folder.fill" catalog="system" id="tzz-rf-PqG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="9zK-rU-p1P" id="iYL-PU-sB5"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="BO9-yN-TRI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="9zK-rU-p1P" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="952"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="lUz-8D-VpV">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VF0-Sw-CQt" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4YN-KG-efh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wDU-xd-nke"/>
+                        <segue destination="EUW-EK-Sqj" kind="relationship" relationship="viewControllers" id="6HO-77-9PM"/>
+                        <segue destination="ejT-4u-sal" kind="relationship" relationship="viewControllers" id="rdL-fn-IAu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS6-tO-T5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
+        <image name="folder.fill" catalog="system" width="64" height="46"/>
+        <image name="person.3.fill" catalog="system" width="71" height="34"/>
+    </resources>
+</document>

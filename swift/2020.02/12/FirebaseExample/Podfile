@@ -9,6 +9,9 @@ target 'FirebaseExample' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Database'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
+  pod 'FirebaseUI'
 
   # Pods for FirebaseExample
 

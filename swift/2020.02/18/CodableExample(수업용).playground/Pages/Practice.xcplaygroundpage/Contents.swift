@@ -157,37 +157,27 @@ if let decodedPerson = try? decoder.decode([Person].self, from: jsonMovie) {
  - 위 URL의 user 부분을 자신의 아이디로 변경
  */
 
-struct Repository: Decodable {
-  let fullName: String
-  let description: String
-  let stargazersCount: Int
-  let forksCount: Int
-  let htmlURL: URL
+struct Repositories: Decodable {
+  let items: [Repository]
   
-  private enum CodingKeys: String, CodingKey {
+  enum CodingKeys: String, CodingKey {
     case items
   }
   
-  private enum Items: String, CodingKey {
-    case fullName = "full_name"
-    case description
-    case stargazerCount = "stargazers_count"
-    case forksCount = "forks_count"
-    case htmlURL = "html_url"
-  }
-}
-
-extension Repository {
-  init(from decoder: Decoder) throws {
-    let value   = try decoder.container(keyedBy: CodingKeys.self)
-    let items = try value.nestedContainer(keyedBy: Items.self, forKey: .items)
-    let htmlURL = try items.decode(String.self, forKey: .htmlURL)
+  struct Repository: Decodable {
+    let fullName: String
+    let description: String?
+    let starCount: Int
+    let forkCount: Int
+    let url: String
     
-    fullName        = try items.decode(String.self, forKey: .fullName)
-    description     = try items.decode(String.self, forKey: .description)
-    stargazersCount = try items.decode(Int.self, forKey: .stargazerCount)
-    forksCount      = try items.decode(Int.self, forKey: .forksCount)
-    self.htmlURL    = URL(string: htmlURL)!
+    enum CodingKeys: String, CodingKey {
+      case fullName = "full_name"
+      case description = "description"
+      case starCount = "stargazers_count"
+      case forkCount = "forks_count"
+      case url = "html_url"
+    }
   }
 }
 
@@ -203,13 +193,15 @@ func fetchGitHubRepositories() {
       else { return print("Invalid response") }
     guard let repositoriesData = repositoriesData else { return }
     
-    if let decodedRepositories = try? decoder.decode([Repository].self, from: repositoriesData) {
-      decodedRepositories
-        .forEach { print($0) }
-    } else {
-      print("has not passed")
+    do {
+      let repositories = try JSONDecoder().decode(Repositories.self, from: repositoriesData)
+      repositories.items.forEach { print($0) }
+    } catch {
+      print(error.localizedDescription)
     }
+    
   }
+    
   dataTask.resume()
 }
 
