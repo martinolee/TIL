@@ -13,6 +13,9 @@
 		721DB0822408D126005796E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721DB0802408D126005796E4 /* Main.storyboard */; };
 		721DB0842408D129005796E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721DB0832408D129005796E4 /* Assets.xcassets */; };
 		721DB0872408D129005796E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721DB0852408D129005796E4 /* LaunchScreen.storyboard */; };
+		721DB0912408DCD6005796E4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721DB0902408DCD6005796E4 /* Song.swift */; };
+		721DB0952408E074005796E4 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721DB0942408E074005796E4 /* SearchService.swift */; };
+		721DB0972408E66D005796E4 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721DB0962408E66D005796E4 /* ServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		721DB0832408D129005796E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		721DB0862408D129005796E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		721DB0882408D129005796E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		721DB0902408DCD6005796E4 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		721DB0942408E074005796E4 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		721DB0962408E66D005796E4 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		721DB0792408D126005796E4 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				721DB07A2408D126005796E4 /* AppDelegate.swift */,
-				721DB07C2408D126005796E4 /* SceneDelegate.swift */,
-				721DB07E2408D126005796E4 /* ViewController.swift */,
+				721DB0922408E04E005796E4 /* Application */,
+				721DB08E2408DCBC005796E4 /* Model */,
+				721DB0982408E89E005796E4 /* ViewController */,
+				721DB0932408E05A005796E4 /* Service */,
 				721DB0802408D126005796E4 /* Main.storyboard */,
 				721DB0832408D129005796E4 /* Assets.xcassets */,
 				721DB0852408D129005796E4 /* LaunchScreen.storyboard */,
 				721DB0882408D129005796E4 /* Info.plist */,
 			);
 			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		721DB08E2408DCBC005796E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				721DB0902408DCD6005796E4 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		721DB0922408E04E005796E4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				721DB07A2408D126005796E4 /* AppDelegate.swift */,
+				721DB07C2408D126005796E4 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		721DB0932408E05A005796E4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				721DB0942408E074005796E4 /* SearchService.swift */,
+				721DB0962408E66D005796E4 /* ServiceError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		721DB0982408E89E005796E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				721DB07E2408D126005796E4 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721DB0972408E66D005796E4 /* ServiceError.swift in Sources */,
+				721DB0912408DCD6005796E4 /* Song.swift in Sources */,
 				721DB07F2408D126005796E4 /* ViewController.swift in Sources */,
+				721DB0952408E074005796E4 /* SearchService.swift in Sources */,
 				721DB07B2408D126005796E4 /* AppDelegate.swift in Sources */,
 				721DB07D2408D126005796E4 /* SceneDelegate.swift in Sources */,
 			);

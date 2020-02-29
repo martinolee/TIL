@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum ServiceError: Error {
+  case noData
+  case clientError
+  case invalidStatusCode
+  case invalidFormat
+}
