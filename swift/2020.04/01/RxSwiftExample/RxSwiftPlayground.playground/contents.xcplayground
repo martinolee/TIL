@@ -6,5 +6,12 @@
         <page name='PublishSubject'/>
         <page name='ReplaySubject'/>
         <page name='BehaviorSubject'/>
+        <page name='Observable'/>
+        <page name='flatMap'/>
+        <page name='flatMapLatest'/>
+        <page name='concatMap'/>
+        <page name='combineLatest'/>
+        <page name='merge'/>
+        <page name='zip'/>
     </pages>
 </playground>

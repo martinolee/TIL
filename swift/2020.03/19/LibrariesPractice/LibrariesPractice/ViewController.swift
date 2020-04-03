@@ -13,33 +13,38 @@ import SnapKit
 import Then
 
 class ViewController: UIViewController {
+  private lazy var tableView = UITableView().then {
+    $0.dataSource = self
+    $0.delegate = self
+    
+    $0.register(UserInfoTableViewCell.self, forCellReuseIdentifier: "Cell")
+    
+    $0.rowHeight = UITableView.automaticDimension
+//    $0.estimatedRowHeight = 600
+  }
+  
   private let swiftImageView = UIImageView().then {
     $0.contentMode = .scaleAspectFit
+    $0.backgroundColor = .cyan
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.addSubview(swiftImageView)
-    setupSwiftImageViewAutoLayout()
-    
-    let imageURL = URL(string: "https://developer.apple.com/swift/images/swift-og.png")!
-    let image = ImageResource(downloadURL: imageURL)
-    swiftImageView.kf.setImage(with: image)
-    
-    requestData("https://developer.apple.com/swift/images/swift-og.png") { result in
-      switch result {
-      case .success(let data):
-        print(data)
-      case .failure(let error):
-        print(error)
-      }
+    view.addSubview(tableView)
+    tableView.snp.makeConstraints { make in
+      make.edges.equalToSuperview()
     }
+//    view.addSubview(swiftImageView)
+//    setupSwiftImageViewAutoLayout()
+    
+
+//    swiftImageView.kf.setImage(with: image)
   }
   
   private func setupSwiftImageViewAutoLayout() {
     swiftImageView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalTo(view.safeAreaLayoutGuide).inset(50)
     }
   }
   
@@ -55,4 +60,36 @@ class ViewController: UIViewController {
         }
     }
   }
+}
+
+extension ViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    10
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? UserInfoTableViewCell
+      else { fatalError() }
+    cell.delegate = self
+    
+    let imageURL = URL(string: "https://developer.apple.com/swift/images/swift-og.png")!
+    let image = ImageResource(downloadURL: imageURL)
+    
+    cell.configure(userProfileImageResource: image, userName: "Steve Jobs", extraInfo: "5% 적립 + 최초 1회 무료배송")
+    
+    return cell
+  }
+}
+
+extension ViewController: UserInfoTableViewCellDelgate {
+  func whenLeftButtonDidTouchUpInside(_ button: UIButton) {
+    print("whenLeftButtonDidTouchUpInside")
+  }
+  
+  func whenRightButtonDidTouchUpInside(_ button: UIButton) {
+    print("whenRightButtonDidTouchUpInside")
+  }
+}
+
+extension ViewController: UITableViewDelegate {
 }
