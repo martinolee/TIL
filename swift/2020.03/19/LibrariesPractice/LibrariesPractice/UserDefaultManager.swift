@@ -7,22 +7,25 @@
 //
 
 import Foundation
-import Alamofire
 
 class UserDefaultManager {
+  enum Key: String {
+    case token, cart
+  }
+  
   static let shared = UserDefaultManager()
   
   private init() { }
   
-  @discardableResult func set<T>(_ value: T, forKey defaultName: String) -> Bool {
-    UserDefaults.standard.set(value, forKey: defaultName)
+  @discardableResult func set<T>(_ value: T, for key: Key) -> Bool {
+    UserDefaults.standard.set(value, forKey: key.rawValue)
     UserDefaults.standard.synchronize()
     
-    guard UserDefaults.standard.object(forKey: defaultName) != nil else { return false }
+    guard UserDefaults.standard.object(forKey: key.rawValue) != nil else { return false }
     return true
   }
   
-  func get(forKey defaultName: String) -> Any? {
-    UserDefaults.standard.object(forKey: defaultName)
+  func get(for key: Key) -> Any? {
+    UserDefaults.standard.object(forKey: key.rawValue)
   }
 }
